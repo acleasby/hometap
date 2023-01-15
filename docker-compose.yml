@@ -1,0 +1,17 @@
+version: "3"
+services:
+  api:
+    ports:
+      - 8080:8080
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    environment:
+      - HOUSECANARY_URL=http://webserver:5000
+
+  webserver:
+    ports:
+      - 5000:5000
+    build:
+      context: .
+      dockerfile: Dockerfile-webserver

@@ -1,0 +1,18 @@
+type Query{
+    "Get property details by street address and zipcode"
+    property(
+        "Property street address"
+        address: String,
+        "Property zipcode"
+        zipcode:String): Property
+}
+
+"Model of a property and its details"
+type Property {
+    "Material roof is made of"
+    roofCover: String
+    "Roof structure"
+    roofType: String
+    "true iff the property record indicates a septic sewer system"
+    septic: Boolean
+}

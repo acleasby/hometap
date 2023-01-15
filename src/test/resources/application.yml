@@ -1,0 +1,6 @@
+micronaut:
+  http:
+    services:
+      housecanary:
+        urls:
+          - http://localhost:5000

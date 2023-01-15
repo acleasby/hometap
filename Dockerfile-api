@@ -1,0 +1,8 @@
+FROM gradle:7.6.0-focal
+
+COPY . /project
+
+WORKDIR /project
+RUN gradle assemble
+
+CMD gradle run

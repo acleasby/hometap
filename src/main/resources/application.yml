@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: hometap
+  http:
+    services:
+      housecanary:
+        urls:
+          - ${HOUSECANARY_URL:https://api.housecanary.com/v2}
+
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+graphql:
+  enabled: true
+  graphiql:
+    enabled: true
+

@@ -1,0 +1,10 @@
+FROM python:3.9.16-bullseye
+
+RUN pip install flask
+
+COPY ./pyserver /server
+COPY ./docs /server/static
+
+WORKDIR /server
+
+CMD python wsgi.py
